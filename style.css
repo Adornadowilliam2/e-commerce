@@ -1,0 +1,289 @@
+*::before,
+*::after,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--primary-font);
+  background: #fdf1f5;
+}
+
+:root {
+  --primary-color: #636ae8;
+  --primary-font: "Manrope", sans-serif;
+  --primary-color-dark: #4e54c8;
+}
+
+.hero-section h1,
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h1 {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 10px 0 0 #333;
+  padding: 10px;
+  background: #ffffff;
+  font-weight: bold;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav input {
+  padding: 10px;
+  border: 1px solid #b8b4b4;
+  border-radius: 5px;
+  background: #f3f4f6;
+}
+nav input::placeholder {
+  margin: 10px;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevents the icon from interfering with input */
+}
+
+input[type="text"] {
+  padding-right: 30px; /* Add padding to avoid text overlap with icon */
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Space between logo and menu */
+  padding: 10px; /* Add some padding */
+}
+
+.header h1 {
+  font-family: "Yatra One", serif;
+}
+
+.header div {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  margin-right: 3rem;
+}
+
+.header img {
+  width: 50px; /* Adjust the image size */
+  height: auto; /* Keep the aspect ratio */
+  margin-right: 10px; /* Space between the image and the logo text */
+}
+
+.header ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display list items in a row */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.header li {
+  margin-left: 20px; /* Space between menu items */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.img-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.5));
+}
+
+/* =============================  */
+.content {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically (if needed) */
+  text-align: left; /* Left-align text */
+  margin: 0 auto; /* Center the content block */
+  max-width: 600px; /* Optional: limit width for better readability */
+}
+.content h1 {
+  margin: 0; /* Remove default margin */
+}
+
+.content p {
+  margin: 10px 0; /* Add some margin for spacing */
+  text-align: left; /* Ensure the paragraph text is left-aligned */
+  color: #7d818c;
+}
+
+.content button {
+  background: var(--primary-color);
+  color: white; /* Text color */
+  padding: 10px 20px;
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  transition: background 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.content button:hover {
+  background: var(--primary-color-dark); /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.content button:active {
+  transform: translateY(0); /* Pressed down effect */
+}
+/* ======================== */
+
+.home {
+  background: #ffffff;
+  height: 200vh;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-container,
+.furniture-container {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 30px;
+}
+
+.carousel .card {
+  width: 300px; /* Adjust this width as needed */
+  text-align: center; /* Center the image */
+  background: rgb(211, 210, 210);
+  padding: 10px;
+  box-shadow: 5px 15px 20px black;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+.carousel .card:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+}
+
+.carousel .card img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+}
+
+.carousel-button {
+  background-color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+  box-shadow: 5px 5px 10px black;
+}
+
+#prev,
+#prev-furniture {
+  position: absolute;
+  left: 10px;
+}
+
+.card-container h4,
+.furniture-container h4 {
+  color: var(--primary-color);
+  text-align: left;
+}
+#next,
+#next-furniture {
+  position: absolute;
+  right: 10px;
+}
+.card-container h3 {
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.product-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =============== */
+.category-choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items */
+}
+
+.category-choices-child {
+  margin: 10px; /* Space between cards */
+}
+.category-choices .card {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Same as width for a circle */
+  background-color: pink;
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+.category-choices .card:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  background-color: lightcoral; /* Change color on hover */
+}
+.category-choices .card img {
+  max-width: 100%; /* Adjust image size within the circle */
+  max-height: 100%;
+}
+
+.space-container {
+  width: 95%;
+  margin-inline: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.space-container h1 {
+  font-size: 2rem;
+}
