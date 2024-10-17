@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce Website</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="grocery.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Yatra+One&display=swap"
       rel="stylesheet"
@@ -16,7 +16,7 @@
     <nav>
       <span class="header">
         <div>
-          <img src="grocery.png" alt="" />
+          <img src="images/logo.png" alt="logo" />
           <h1>Shopvolution</h1>
         </div>
         <ul>
@@ -27,8 +27,11 @@
         </ul>
       </span>
       <span class="search-container">
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..." oninput="setSearch(event)" />
         <span class="search-icon">🔍</span>
+        <div class="search-content">
+          <ul id="search-results"></ul>
+        </div>
       </span>
     </nav>
     <section class="hero-section">
@@ -36,14 +39,14 @@
         ><div>
           <h1>Shopvolution</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            obcaecati quaerat, tempora est eos totam ut quasi voluptatibus dicta
-            accusamus.
+            Join the Shopvolution and elevate your shopping experience today,
+            where innovation meets unbeatable value and every purchase
+            transforms the way you shop!
           </p>
           <button>Shop now</button>
         </div> </span
       ><span class="img-mockup">
-        <img src="bgmockup.png" alt="bg mockup" width="600px" />
+        <img src="images/hero1.png" alt="hero1" width="600px" />
       </span>
     </section>
     <section class="home">
@@ -67,7 +70,72 @@
           <button id="next-furniture" class="carousel-button">▶</button>
         </div>
       </div>
+      <section class="hero-section">
+        <span class="content">
+          <div>
+            <h1>Call to Action 🎉</h1>
+            <p>
+              Ready to take the next step? Join us in discovering exciting
+              opportunities that await you. Whether you're looking to enhance
+              your skills, connect with like-minded individuals, or simply
+              explore new horizons, now is the perfect time to dive in. Don't
+              miss out on what could be a transformative experience!
+            </p>
+            <button>Explore now</button>
+          </div>
+        </span>
+        <span class="img-mockup">
+          <img src="images/hero2.png" alt="hero1" width="600px" class="hero2" />
+        </span>
+      </section>
+      <section
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        "
+      >
+        <div class="footer">
+          <div>
+            <img src="images/logo.png" alt="logo" />
+            <h1 class="newsletter-h1">Shopvolution</h1>
+          </div>
+          <h2 class="newsletter-h2">Sucribe to my newsletter</h2>
+          <span class="send-subcribe"
+            ><input
+              type="email"
+              placeholder="input your email"
+              id="emailInput"
+            /><button onclick="subscribe()">Subcribe</button></span
+          >
+          <span class="span-container">
+            <span>
+              <h1>Product</h1>
+              <h2>Features</h2>
+              <h2>Pricing</h2>
+            </span>
+
+            <span>
+              <h1>Resources</h1>
+              <h2>Blog</h2>
+              <h2>User Guides</h2>
+              <h2>Webinars</h2></span
+            ><span
+              ><h1>Company</h1>
+              <h2>About Us</h2>
+              <h2>Contact Us</h2></span
+            ><span
+              ><h1>Planning & Pricing</h1>
+              <h2>Personal</h2>
+              <h2>Start up</h2>
+              <h2>Organization</h2></span
+            >
+          </span>
+        </div>
+      </section>
     </section>
   </body>
 </html>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
+<script src="js/store.js"></script>
