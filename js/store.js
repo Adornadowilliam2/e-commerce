@@ -129,3 +129,26 @@ prevFurniture.addEventListener("click", () => {
   lastIndexFurniture -= 1;
   updateIndexFurniture();
 });
+
+let spanContainer = document.querySelector(".span-container");
+spanContainer.innerHTML = `<span>
+<h1>Product</h1>
+<h2>Features</h2>
+<h2>Pricing</h2>
+</span>
+
+<span>
+<h1>Resources</h1>
+<h2>Blog</h2>
+<h2>User Guides</h2>
+<h2>Webinars</h2></span
+><span
+><h1>Company</h1>
+<h2>About Us</h2>
+<h2>Contact Us</h2></span
+><span
+><h1>Planning & Pricing</h1>
+<h2>Personal</h2>
+<h2>Start up</h2>
+<h2>Organization</h2></span
+>`;
