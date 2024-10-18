@@ -125,36 +125,61 @@ data[0].map(
 );
 
 function setSearch(event) {
-  const query = event.target.value.toLowerCase();
+  const query = event.target.value;
   const resultsContainer = document.getElementById("search-results");
-  resultsContainer.innerHTML = ""; 
+  resultsContainer.innerHTML = "";
 
   if (query) {
-    const filteredItems = data
-      .flat()
-      .filter((item) => item.name.toLowerCase().includes(query));
+    const results = [...data[1], ...data[2]].filter((item) =>
+      item.name.toLowerCase().includes(query)
+    );
 
-    filteredItems.forEach((item) => {
+    results.forEach((item) => {
       const li = document.createElement("li");
       li.textContent = item.name;
       li.style.borderBottom = "1px solid black";
       li.style.cursor = "pointer";
+      li.style.textTransform = "lowercase";
       resultsContainer.appendChild(li);
     });
   }
 }
 
+let spanContainer = document.querySelector(".span-container");
+spanContainer.innerHTML = `
+  <span>
+    <h1>Product</h1>
+    <h2>Features</h2>
+    <h2>Pricing</h2>
+  </span>
+  <span>
+    <h1>Resources</h1>
+    <h2>Blog</h2>
+    <h2>User Guides</h2>
+    <h2>Webinars</h2>
+  </span>
+  <span>
+    <h1>Company</h1>
+    <h2>About Us</h2>
+    <h2>Contact Us</h2>
+  </span>
+  <span>
+    <h1>Planning & Pricing</h1>
+    <h2>Personal</h2>
+    <h2>Start up</h2>
+    <h2>Organization</h2>
+  </span>
+`;
+
 function subscribe() {
   const emailInput = document.getElementById("emailInput");
   const email = emailInput.value;
 
-  
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (emailPattern.test(email)) {
     alert(`Thank you for subscribing with: ${email}`);
-    
-    
-    emailInput.value = ""; 
+
+    emailInput.value = "";
   } else {
     alert("Please enter a valid email address.");
   }

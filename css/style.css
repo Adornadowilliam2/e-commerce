@@ -60,6 +60,7 @@ nav input {
   border: 1px solid #b8b4b4;
   border-radius: 5px;
   background: #f3f4f6;
+  text-transform: lowercase;
 }
 
 nav input::placeholder {
