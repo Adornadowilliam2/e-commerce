@@ -189,7 +189,7 @@ nav .header li {
   position: relative;
 }
 
-.card-container,
+.clothes-container,
 .furniture-container {
   display: flex;
   transition: transform 0.3s ease;
@@ -224,25 +224,25 @@ nav .header li {
   box-shadow: 5px 5px 10px black;
 }
 
-#prev,
+#prev-clothes,
 #prev-furniture {
   position: absolute;
   left: 10px;
 }
 
-#next,
+#next-clothes,
 #next-furniture {
   position: absolute;
   right: 10px;
 }
 
-.card-container h4,
+.clothes-container h4,
 .furniture-container h4 {
   color: var(--primary-color);
   text-align: left;
 }
 
-.card-container h3 {
+.clothes-container h3 {
   text-align: left;
   text-transform: capitalize;
 }
@@ -342,14 +342,14 @@ nav .header li {
 .footer .span-container h2 {
   font-size: 18px;
   font-weight: lighter;
+  cursor: pointer;
 }
 
 .send-subcribe button {
   background: var(--primary-color);
   color: white;
-  padding: 10px 20px;
+  padding: 11px 20px;
   border: none;
-  border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 16px;
   cursor: pointer;
@@ -357,6 +357,9 @@ nav .header li {
 
 .send-subcribe input {
   padding: 10px;
+  border: none;
+  outline: 2px solid #7d818c;
+  background-color: #c7c7c7;
 }
 .send-subcribe {
   margin-bottom: 10px;

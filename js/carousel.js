@@ -1,8 +1,8 @@
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
+const nextClothes = document.getElementById("next-clothes");
+const prevClothes = document.getElementById("prev-clothes");
 const nextFurniture = document.getElementById("next-furniture");
 const prevFurniture = document.getElementById("prev-furniture");
-const cardContainer = document.querySelector(".card-container");
+const clothesContainer = document.querySelector(".clothes-container");
 const furnitureContainer = document.querySelector(".furniture-container");
 
 const index = {
@@ -14,7 +14,7 @@ const index = {
 
 function updateIndex(category) {
   const isClothes = category == "clothes";
-  const currentContainer = isClothes ? cardContainer : furnitureContainer;
+  const currentContainer = isClothes ? clothesContainer : furnitureContainer;
   const currentData = isClothes ? data[1] : data[2];
   const firstIndex = isClothes ? index.clothesFirst : index.furnitureFirst;
   const lastIndex = isClothes ? index.clothesLast : index.furnitureLast;
@@ -41,8 +41,8 @@ function updateIndex(category) {
     `;
   });
 
-  const nextButton = isClothes ? next : nextFurniture;
-  const prevButton = isClothes ? prev : prevFurniture;
+  const nextButton = isClothes ? nextClothes : nextFurniture;
+  const prevButton = isClothes ? prevClothes : prevFurniture;
 
   nextButton.disabled = lastIndex >= currentData.length;
   prevButton.disabled = firstIndex <= 0;
@@ -56,13 +56,13 @@ function changeHeartIcon(button, itemId, isClothes) {
 }
 
 // Event listeners for clothes buttons
-next.addEventListener("click", () => {
+nextClothes.addEventListener("click", () => {
   index.clothesFirst++;
   index.clothesLast++;
   updateIndex("clothes");
 });
 
-prev.addEventListener("click", () => {
+prevClothes.addEventListener("click", () => {
   index.clothesFirst--;
   index.clothesLast--;
   updateIndex("clothes");
