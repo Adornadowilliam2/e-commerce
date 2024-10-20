@@ -21,7 +21,7 @@ body {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: 10px 0 0 #333;
   padding: 10px;
   background: #ffffffd6;
@@ -43,6 +43,7 @@ nav span {
   align-items: center;
   justify-content: space-between;
 }
+
 nav h1 {
   font-size: 24px;
   margin-right: 10px;
@@ -89,6 +90,9 @@ nav .header {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+}
+button {
+  border: none;
 }
 
 nav .header h1,
@@ -204,6 +208,7 @@ nav .header li {
   box-shadow: 5px 15px 20px black;
   transition: transform 0.3s ease;
 }
+
 .carousel .card:hover {
   transform: scale(1.05);
 }
@@ -274,10 +279,12 @@ nav .header li {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 .category-choices .card:hover {
   transform: scale(1.1);
   background-color: lightcoral;
 }
+
 .category-choices .card img {
   max-width: 100%;
   max-height: 100%;
@@ -297,8 +304,8 @@ nav .header li {
 .product-content button {
   margin-right: 0.5rem;
   background-color: transparent;
-  border: none;
 }
+
 .search-content {
   position: absolute;
   background-color: white;
@@ -361,6 +368,7 @@ nav .header li {
   outline: 2px solid #7d818c;
   background-color: #c7c7c7;
 }
+
 .send-subcribe {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -375,4 +383,112 @@ nav .header li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  nav h1 {
+    font-size: 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  nav .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .header div {
+    margin-right: 0;
+  }
+
+  .hero-section img {
+    width: 100%;
+  }
+
+  nav input {
+    width: 100%;
+  }
+
+  .content {
+    max-width: 90%;
+  }
+
+  .carousel .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  nav ul li {
+    display: none;
+  }
+  .category-choices {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .category-choices .card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer .span-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer .newsletter-h2 {
+    font-size: 18px;
+  }
+
+  .footer .span-container h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content button {
+    width: 100%;
+  }
+
+  .footer .newsletter-h1 {
+    font-size: 18px;
+  }
 }
