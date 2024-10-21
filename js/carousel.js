@@ -27,7 +27,7 @@ function updateIndex(category) {
       <div class="card">
         <img src="images/${isClothes ? "category1" : "category2"}/${
       item.image
-    }" alt="${item.name} img" />
+    }" alt="${item.name} img" class="item-img"/>
         <span class="product-content">
           <h3>${item.name}</h3>
           <button onclick='changeHeartIcon(this, "${item.id}", "${isClothes}")'>

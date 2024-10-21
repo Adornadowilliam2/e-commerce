@@ -140,6 +140,7 @@ function setSearch(event) {
       li.style.borderBottom = "1px solid black";
       li.style.cursor = "pointer";
       li.style.textTransform = "lowercase";
+      li.style.zIndex = 9;
       resultsContainer.appendChild(li);
     });
   }
